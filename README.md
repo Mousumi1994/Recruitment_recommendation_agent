@@ -1,4 +1,4 @@
-📌 Project Overview
+**📌 Project Overview**
 
 This project demonstrates a basic Recruitment Recommendation AI Agent built using CrewAI and a local Large Language Model (LLM).
 The agent simulates how AI can assist HR and hiring teams by analyzing a candidate’s profile against a job description and generating a structured hiring recommendation.
@@ -11,7 +11,7 @@ How to use tools for task-specific reasoning
 
 How AI agents can support real-world recruitment workflows
 
-🧠 What This AI Agent Does
+**🧠 What This AI Agent Does**
 
 The AI agent:
 
@@ -31,7 +31,7 @@ Final hiring recommendation
 
 This system is intended as a decision-support tool, not a replacement for human recruiters.
 
-⚙️ Technology Stack
+**⚙️ Technology Stack**
 
 Python
 
@@ -43,14 +43,15 @@ Prompt Engineering
 
 Tool-based agent reasoning
 
-🏗️ Code Architecture & Explanation
-1️⃣ LLM Initialization
+**🏗️ Code Architecture & Explanation**
+**1️⃣ LLM Initialization**
+
 llm = LLM(model="ollama/llama3.1", base_url="http://localhost:11434")
 
 
 A local LLM (Llama 3.1) is used via Ollama, enabling offline experimentation and avoiding external API dependencies.
 
-2️⃣ Tool Definitions
+**2️⃣ Tool Definitions**
 
 Two tools are created to simulate modular recruitment logic:
 
@@ -72,7 +73,7 @@ Compares extracted skills against job requirements
 
 Simulates evaluation logic for candidate-job fit
 
-3️⃣ AI Agent Definition
+**3️⃣ AI Agent Definition**
 recruiter_agent = Agent(
     role="Expert Recruitment Analyst",
     goal="Recommend the top candidate for a specific job opening",
@@ -91,7 +92,8 @@ Generates objective, data-informed recommendations
 
 Does not delegate tasks (kept simple by design)
 
-4️⃣ Task Configuration
+**4️⃣ Task Configuration**
+
 recommendation_task = Task(
     description=...,
     agent=recruiter_agent
@@ -114,7 +116,8 @@ Gaps
 
 Hiring recommendation
 
-5️⃣ Crew Setup & Execution
+**5️⃣ Crew Setup & Execution**
+
 crew = Crew(
     agents=[recruiter_agent],
     tasks=[recommendation_task],
@@ -128,7 +131,7 @@ Tasks run sequentially
 
 Final output is printed as a recommendation report
 
-🎯 Why This Project Matters
+**🎯 Why This Project Matters**
 
 This project showcases:
 
@@ -148,7 +151,7 @@ Scoring models using data science techniques
 
 ATS or HR system integration
 
-🚀 Future Improvements
+**🚀 Future Improvements**
 
 Add real resume parsing using NLP
 
@@ -158,7 +161,7 @@ Integrate scoring logic using ML models
 
 Build a UI or API layer
 
-👤 Author
+**👤 Author**
 
 Aspiring Data Scientist
 Passionate about applying AI and data science to solve real-world problems in recruitment, HR tech, and decision support systems.
