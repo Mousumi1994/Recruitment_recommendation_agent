@@ -78,7 +78,6 @@ Simulates evaluation logic for candidate-job fit
 
 
 recruiter_agent = Agent(
-    
     role="Expert Recruitment Analyst",
     
     goal="Recommend the top candidate for a specific job opening",
@@ -105,7 +104,6 @@ Does not delegate tasks (kept simple by design)
 
 
 recommendation_task = Task(
-
     description=...,
     
     agent=recruiter_agent
@@ -132,7 +130,6 @@ Hiring recommendation
 **5️⃣ Crew Setup & Execution**
 
 crew = Crew(
-
     agents=[recruiter_agent],
     
     tasks=[recommendation_task],
