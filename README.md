@@ -76,9 +76,13 @@ Simulates evaluation logic for candidate-job fit
 **3️⃣ AI Agent Definition**
 
 recruiter_agent = Agent(
+    
     role="Expert Recruitment Analyst",
+    
     goal="Recommend the top candidate for a specific job opening",
+    
     tools=[analyze_resume_skills, match_job_description],
+    
     allow_delegation=False
 )
 
