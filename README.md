@@ -56,7 +56,10 @@ A local LLM (Llama 3.1) is used via Ollama, enabling offline experimentation and
 Two tools are created to simulate modular recruitment logic:
 
 🔹 Resume Skill Analysis Tool
+
+
 @tool
+
 def analyze_resume_skills(candidate_data: str) -> str:
 
 
@@ -65,7 +68,11 @@ Extracts key skills and experience from candidate data
 In this prototype, returns a predefined analysis (can be extended later)
 
 🔹 Job Matching Tool
+
+
+
 @tool
+
 def match_job_description(job_description: str, skills_analysis: str) -> str:
 
 
