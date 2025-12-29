@@ -75,6 +75,8 @@ Simulates evaluation logic for candidate-job fit
 
 **3️⃣ AI Agent Definition**
 
+
+
 recruiter_agent = Agent(
     
     role="Expert Recruitment Analyst",
@@ -85,6 +87,8 @@ recruiter_agent = Agent(
     
     allow_delegation=False
 )
+
+
 
 
 This single AI agent:
@@ -99,10 +103,14 @@ Does not delegate tasks (kept simple by design)
 
 **4️⃣ Task Configuration**
 
+
 recommendation_task = Task(
+
     description=...,
+    
     agent=recruiter_agent
 )
+
 
 
 The task:
@@ -124,8 +132,11 @@ Hiring recommendation
 **5️⃣ Crew Setup & Execution**
 
 crew = Crew(
+
     agents=[recruiter_agent],
+    
     tasks=[recommendation_task],
+    
     process=Process.sequential
 )
 
